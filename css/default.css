@@ -1,0 +1,399 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+html{
+    overflow-y:scroll;
+    height:100%;
+}
+
+body{
+    font:13px/1.4 Verdana,"Lucida Grande",Arial,Helvetica,Sans-Serif;
+    background:white;
+    height:100%;
+    overflow:hidden;
+}
+
+a{
+    text-decoration:none;
+    outline:none;
+    color:#3680a1;
+}
+
+a:hover{
+    color:#2e2e2e;
+}
+
+a:active{
+    outline:0;
+    position:relative;
+    top:1px;
+}
+
+a img{
+    border:0;
+    background:none;
+}
+
+img{
+    vertical-align:middle;
+}
+
+.clear{
+    clear:both;
+}
+
+::selection{
+    background:#ffcc89;
+    color:#222;
+}
+
+::-moz-selection{
+    background:#ffcc89;
+    color:#222;
+}
+
+.hidden{
+    display:none;
+}
+
+#header{
+    float:right;
+    text-align:right;
+    height:4%;
+    width:96%;
+    padding:1% 4% 0 0;
+}
+
+#imprint-opener{
+    font-size:.8em;
+}
+
+.col{
+    float:left;
+    width:30%;
+    height:96%;
+    padding:0 2% 0 2%;
+}
+
+.left{
+    padding:0 2% 0 3%;
+}
+
+.center{
+    padding:0;
+}
+
+.right{
+    padding:0 3% 0 2%;
+}
+
+.boxshadow{
+    position:relative;
+    height:91%;
+    padding:2%;
+    background:#dedede;
+    -moz-box-shadow:0 0 4px #999;
+    -webkit-box-shadow:0 0 4px #999;
+    -webkit-transition:all .1s ease-out;
+}
+
+.boxshadow:hover{
+    box-shadow:0 0 8px #555;
+    -moz-box-shadow:0 0 8px #555;
+    -webkit-box-shadow:0 0 8px #555;
+}
+
+.box{
+    position:relative;
+    background:#eee;
+    height:93%;
+    overflow:hidden;
+}
+
+.box-wrapper{
+    position: relative;
+    height:100%;
+    margin:2%;
+}
+
+ul{
+    list-style:none;
+}
+
+h1{
+    padding:0 3px 5px;
+    margin:0 0 5px 0;
+    font-family:'Reenie Beanie',arial,serif;
+    font-size:24px;
+    font-weight:normal;
+    text-align:center;
+    border-bottom:1px solid #666;
+}
+
+h1 em{
+    font-style:italic;
+    font-size:14px;
+    letter-spacing:0;
+    text-transform:none;
+}
+
+.more{
+    height:2%;
+    margin:2% 0 0 0;
+    font-size:12px;
+    text-align:center;
+}
+
+.scrollbar{
+    position:absolute;
+    right:2px;
+    top:2%;
+    padding:1px;
+    background:#3680a1;
+    width:8px;
+    height:92%;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    -webkit-transition:all .5s ease-out;
+    opacity:0;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter:alpha(opacity=30);
+}
+
+.boxshadow:hover .scrollbar{
+    opacity:.3;
+}
+
+.boxshadow:hover .scrollbar:hover{
+    opacity:.6;
+}
+
+.scrollbar .knob{
+    background:#fff;
+    width:8px;
+    height:5%;
+    cursor:pointer;
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+}
+
+#twitter li{
+    margin:0;
+    border-bottom:1px solid #d3d3d3;
+    padding:6px 3px 6px 3px;
+    overflow:hidden;
+}
+
+#twitter li:last-child{
+    border-bottom:0;
+}
+
+#twitter li span{
+    font-size:.8em;
+    color:#666;
+}
+
+#github h4{
+    padding:0;
+    margin:0;
+    font-size:1em;
+    font-weight:normal;
+}
+
+#github li{
+    margin:0;
+    border-bottom:1px solid #d3d3d3;
+    padding:6px 3px 6px 3px;
+    overflow:hidden;
+}
+
+#github li:last-child{
+    border-bottom:0;
+}
+
+#github li span{
+    font-size:.8em;
+    color:#666;
+}
+
+#flickr{
+    text-align:center;
+}
+
+#flickr .wrapper{
+    height:100%;
+}
+
+#flickr li{
+    display:inline-block;
+    margin:2px;
+    display:-moz-inline-stack;
+    display:inline-block;
+    vertical-align:middle;
+    *display:inline!important;
+    position:relative;
+}
+
+#imprint{
+    padding:6px 3px 6px 3px;
+}
+
+.remooz-element{
+    cursor:-moz-zoom-in;
+}
+
+.remooz-box{
+    position:absolute;
+    top:0;
+    left:0;
+    background:#fff no-repeat center;
+    z-index:100;
+    box-shadow:0 0 10px rgba(0,0,0,0.7);
+    -moz-box-shadow:0 0 10px rgba(0,0,0,0.7);
+    -webkit-box-shadow:0 0 10px rgba(0,0,0,0.7);
+}
+
+.remooz-loading{
+    background-image:url(../gfx/spinner.gif);
+}
+
+.remooz-body{
+    width:100%;
+    height:100%;
+}
+
+.remooz-box-focus.remooz-type-image .remooz-body{
+    cursor:-moz-zoom-out;
+}
+
+.remooz-box-dragging .remooz-body{
+    cursor:move;
+}
+
+.remooz-btn-close{
+    position:absolute;
+    right:-10px;
+    top:-10px;
+    width:30px;
+    height:30px;
+    text-decoration:none;
+    border:0;
+    background:url(../gfx/closebox.png) no-repeat center;
+    visibility:hidden;
+    cursor:pointer;
+}
+
+.remooz-title{
+    position:relative;
+    left:0;
+    top:15px;
+    text-align:left;
+}
+
+.remooz-title-bg{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:#000;
+    z-index:99;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    -webkit-box-shadow:0 0 10px rgba(0,0,0,0.9);
+}
+
+.remooz-title-content{
+    position:relative;
+    padding:5px 15px;
+    color:#fff;
+    z-index:101;
+    font:11px/1.5 Verdana,Geneva,Arial,Helvetica,sans-serif;
+}
+
+.remooz-engine-trident4 .remooz-title-bg{
+    display:none;
+}
+
+.remooz-engine-trident4 .remooz-title-content{
+    background-color:#333;
+}
+
+.remooz-title-content h6{
+    font-size:1.2em;
+    font-weight:bold;
+    color:#eee;
+}
+
+.remooz-title-content p{
+    color:#eee;
+}
+
+.remooz-type-image img{
+    display:block;
+    border:0;
+    width:100%;
+    height:100%;
+}
+
+.remooz-bg{
+    position:absolute;
+    width:33px;
+    height:40px;
+}
+
+.remooz-bg-n{
+    left:0;
+    top:-40px;
+    width:100%;
+    background:url(remo_bg_n.png) repeat-x;
+}
+
+.remooz-bg-ne{
+    right:-33px;
+    top:-40px;
+    background:url(remo_bg_ne.png) no-repeat;
+}
+
+.remooz-bg-e{
+    right:-33px;
+    top:0;
+    height:100%;
+    background:url(remo_bg_e.png) repeat-y;
+}
+
+.remooz-bg-se{
+    right:-33px;
+    bottom:-40px;
+    background:url(remo_bg_se.png) no-repeat;
+}
+
+.remooz-bg-s{
+    left:0;
+    bottom:-40px;
+    width:100%;
+    background:url(remo_bg_s.png) repeat-x;
+}
+
+.remooz-bg-sw{
+    left:-33px;
+    bottom:-40px;
+    background:url(remo_bg_sw.png) no-repeat;
+}
+
+.remooz-bg-w{
+    left:-33px;
+    top:0;
+    height:100%;
+    background:url(remo_bg_w.png) repeat-y;
+}
+
+.remooz-bg-nw{
+    left:-33px;
+    top:-40px;
+    background:url(remo_bg_nw.png) no-repeat;
+}
