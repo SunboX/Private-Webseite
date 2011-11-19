@@ -242,158 +242,84 @@ h1 em{
     padding:6px 3px 6px 3px;
 }
 
-.remooz-element{
-    cursor:-moz-zoom-in;
+/* MILKBOX CSS */
+
+#mbox-overlay{
+    background-color: #fff; /* set the Milkbox overlay color // opacity: see the js options */
+	z-index:50000;
+	cursor: pointer;
 }
 
-.remooz-box{
-    position:absolute;
-    top:0;
-    left:0;
-    background:#fff no-repeat center;
-    z-index:100;
+/* Main box */
+#mbox-mainbox{
+	/* For default width and height, see the js options */
+	top:10%;/* overwritten in the js options to properly position the main box when activated in a scrolled window */
+	background-color: #fff;/* set the main box background color */
+	border: none;/* set the main box border */ 
     box-shadow:0 0 10px rgba(0,0,0,0.7);
     -moz-box-shadow:0 0 10px rgba(0,0,0,0.7);
     -webkit-box-shadow:0 0 10px rgba(0,0,0,0.7);
 }
 
-.remooz-loading{
-    background-image:url(../gfx/spinner.gif);
+/* Where the files actually are injected */
+#mbox-filebox{ margin:0; padding:0; border:none; overflow:hidden; }
+
+#mbox-filebox img,
+#mbox-filebox iframe,
+#mbox-filebox swf{
+	border:none;	
 }
 
-.remooz-body{
-    width:100%;
-    height:100%;
+/*this class is for styling the inner file box*/
+/*these styles will be visible after the first is loaded */
+.mbox-filebox-decorations{
+	border:none;
+	padding:0;
 }
 
-.remooz-box-focus.remooz-type-image .remooz-body{
-    cursor:-moz-zoom-out;
+/* *** BOTTOM *** */
+
+/* container for controls and caption */
+#mbox-bottom { 
+	/* set text options */
+    position: relative;
+	font-size: 12px;
+	color: #666;
+	line-height: 1.4em;
+	text-align: left;
+	padding-top:8px;
+	margin:0;
 }
 
-.remooz-box-dragging .remooz-body{
-    cursor:move;
+/* controls/navigation */
+/* be careful if you change buttons dimensions */
+
+#mbox-controls{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 200px;
+    text-align:right;
 }
 
-.remooz-btn-close{
-    position:absolute;
-    right:-10px;
-    top:-10px;
-    width:30px;
-    height:30px;
-    text-decoration:none;
-    border:0;
-    background:url(../gfx/closebox.png) no-repeat center;
-    visibility:hidden;
-    cursor:pointer;
+#mbox-count{ 
+    padding:2px 0 7px 10px;
 }
 
-.remooz-title{
-    position:relative;
-    left:0;
-    top:15px;
-    text-align:left;
+/* description */
+#mbox-caption{
+    font-family:'Reenie Beanie',arial,serif;
+    font-size:24px;
+    font-weight:normal;
+    color:#000;
+    border-bottom:1px solid #666;
+    padding-bottom:10px;
+	margin:10px 0 10px 10px;
+	font-weight: normal;
+	text-align:justify;
+	overflow-x: hidden;  /* make sure the controls at the right remain accessible, even for small images with very large filenames: those would otherwise overlap those controls at right */
 }
 
-.remooz-title-bg{
-    position:absolute;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    background-color:#000;
-    z-index:99;
-    -moz-border-radius:5px;
-    -webkit-border-radius:5px;
-    -webkit-box-shadow:0 0 10px rgba(0,0,0,0.9);
-}
+.mbox-loading{ background:url(../gfx/spinner.gif) no-repeat center; }/* IMAGE: loading gif */
+.mbox-reset{ clear:both; height:0; margin:0; padding:0; font-size:0; overflow:hidden; }
 
-.remooz-title-content{
-    position:relative;
-    padding:5px 15px;
-    color:#fff;
-    z-index:101;
-    font:11px/1.5 Verdana,Geneva,Arial,Helvetica,sans-serif;
-}
-
-.remooz-engine-trident4 .remooz-title-bg{
-    display:none;
-}
-
-.remooz-engine-trident4 .remooz-title-content{
-    background-color:#333;
-}
-
-.remooz-title-content h6{
-    font-size:1.2em;
-    font-weight:bold;
-    color:#eee;
-}
-
-.remooz-title-content p{
-    color:#eee;
-}
-
-.remooz-type-image img{
-    display:block;
-    border:0;
-    width:100%;
-    height:100%;
-}
-
-.remooz-bg{
-    position:absolute;
-    width:33px;
-    height:40px;
-}
-
-.remooz-bg-n{
-    left:0;
-    top:-40px;
-    width:100%;
-    background:url(remo_bg_n.png) repeat-x;
-}
-
-.remooz-bg-ne{
-    right:-33px;
-    top:-40px;
-    background:url(remo_bg_ne.png) no-repeat;
-}
-
-.remooz-bg-e{
-    right:-33px;
-    top:0;
-    height:100%;
-    background:url(remo_bg_e.png) repeat-y;
-}
-
-.remooz-bg-se{
-    right:-33px;
-    bottom:-40px;
-    background:url(remo_bg_se.png) no-repeat;
-}
-
-.remooz-bg-s{
-    left:0;
-    bottom:-40px;
-    width:100%;
-    background:url(remo_bg_s.png) repeat-x;
-}
-
-.remooz-bg-sw{
-    left:-33px;
-    bottom:-40px;
-    background:url(remo_bg_sw.png) no-repeat;
-}
-
-.remooz-bg-w{
-    left:-33px;
-    top:0;
-    height:100%;
-    background:url(remo_bg_w.png) repeat-y;
-}
-
-.remooz-bg-nw{
-    left:-33px;
-    top:-40px;
-    background:url(remo_bg_nw.png) no-repeat;
-}

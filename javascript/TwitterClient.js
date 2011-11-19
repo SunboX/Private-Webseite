@@ -20,10 +20,11 @@ var TwitterClient = new Class({
     },
     retrieve: function(){ (new Request.JSONP({
             url: "http://twitter.com/statuses/user_timeline/" + this.username + ".json",
+            method: 'get',
             data: {
                 count: this.options.count,
                 since_id: this.options.sinceID,
-                include_rts: true
+                include_rts: 'true'
             },
             onRequest: this.fireEvent("request"),
             onComplete: function(a){

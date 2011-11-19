@@ -23,15 +23,8 @@ window.addEvent("domready", function(){
             new ScrollBar("flickr-scrollbox", "flickr-scrollbar", "flickr-knob", {
                 mode: "vertical"
             });
-            ReMooz.assign("a.flickr", {
-                origin: "img",
-                shadow: "onOpenEnd",
-                resizeFactor: 0.8,
-                cutOut: false,
-                opacityResize: 0.4,
-                dragging: false,
-                centered: true
-            });
+            $$("a.flickr").set("data-milkbox", "gallery");
+            milkbox.reloadPageGalleries();
         }
     });
     var a = $$("div.center .boxshadow")[0],
