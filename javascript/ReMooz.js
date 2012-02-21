@@ -3,7 +3,7 @@
  *
  * Inspired by so many boxes and zooms
  *
- * @version    	1.0
+ * @version        1.0
  *
  * @license		MIT-style license
  * @author		Harald Kirschner <mail [at] digitarald.de>

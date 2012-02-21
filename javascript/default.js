@@ -2,17 +2,13 @@ window.addEvent("domready", function(){
     (new TwitterClient("sonnenkiste", {
         count: 30,
         onComplete: function(){
-            new ScrollBar("twitter-scrollbox", "twitter-scrollbar", "twitter-knob", {
-                mode: "vertical"
-            });
+            new ScrollBar($("twitter-scrollbox").getParent(".col"), "twitter-scrollbox", "twitter-scrollbar");
         }
     })).retrieve();
     (new GithubClient("SunboX", {
         count: 30,
         onComplete: function(){
-            new ScrollBar("github-scrollbox", "github-scrollbar", "github-knob", {
-                mode: "vertical"
-            });
+            new ScrollBar($("github-scrollbox").getParent(".col"), "github-scrollbox", "github-scrollbar");
         }
     })).retrieve();
     new FlickrClient("flickr", {
@@ -20,9 +16,7 @@ window.addEvent("domready", function(){
             "class": "photo"
         }),
         onComplete: function(){
-            new ScrollBar("flickr-scrollbox", "flickr-scrollbar", "flickr-knob", {
-                mode: "vertical"
-            });
+            new ScrollBar($("flickr-scrollbox").getParent(".col"), "flickr-scrollbox", "flickr-scrollbar");
             $$("a.flickr").set("data-milkbox", "gallery");
             milkbox.reloadPageGalleries();
         }
@@ -53,5 +47,12 @@ window.addEvent("domready", function(){
         f.stop();
         d.fade("in");
         b.fade("out");
+    });
+    var cols = $$('.col');
+    cols.addEvents({
+        mouseenter: function(){
+            cols.removeClass('hover');
+            this.addClass('hover');
+        }
     });
 });

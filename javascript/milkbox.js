@@ -1,5 +1,5 @@
 /*
-	Milkbox v3.0.2 - required: mootools.js v1.3 core + more (see the relative js file for details about used modules)
+    Milkbox v3.0.2 - required: mootools.js v1.3 core + more (see the relative js file for details about used modules)
 
 	by Luca Reghellin (http://www.reghellin.com) September 2011, MIT-style license.
 	Inspiration Lokesh Dhakar (http://www.lokeshdhakar.com/projects/lightbox2/)

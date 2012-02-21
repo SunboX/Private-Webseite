@@ -23,7 +23,7 @@ var GithubClient = new Class({
             url: "http://github.com/api/v2/json/repos/show/" + this.username,
             onRequest: this.fireEvent("request"),
             onComplete: function(response){
-                repos = response.repositories;
+                var repos = response.repositories;
                 repos = repos.sort(function(p1, p2){
                     p1 = (Date.parse(p1.pushed_at) || Date.parse(p1.created_at)).getTime();
                     p2 = (Date.parse(p2.pushed_at) || Date.parse(p2.created_at)).getTime();
