@@ -24,10 +24,10 @@ var FlickrClient = new Class({
         this.templatesShown = 0;
         this.fadingIn = false;
         this.boundFadeComplete = this.fadeComplete.bind(this);
-        this.fetchList()
+        this.fetchList();
     },
     checkList: function(){
-        this.photosLoaded + this.index < 80 ? this.fetchList((this.photosLoaded / this.imagesPerReq).toInt() + 1) : this.fireEvent.delay(1E3, this, ["complete"])
+        this.photosLoaded + this.index < 80 ? this.fetchList((this.photosLoaded / this.imagesPerReq).toInt() + 1) : this.fireEvent.delay(1E3, this, ["complete"]);
     },
     fetchList: function(a){
         a = a || 1;
@@ -59,17 +59,16 @@ var FlickrClient = new Class({
                 new Asset.image("http://farm" + b.farm + ".static.flickr.com/" + b.server + "/" + b.id + "_" + b.secret + "_s.jpg", {
                     onload: function(d){
                         d.inject(c);
-                        this.isOwner() && d.store("photo",
-                        b);
+                        if(this.isOwner()) d.store("photo", b);
                         this.attachPhotoTmpl(c, d, b);
-                        this.fadeNextIn()
+                        this.fadeNextIn();
                     }.bind(this)
                 });
-                this.templates.push(c)
+                this.templates.push(c);
             },
             this);
-            this.checkList()
-        } else alert(a.message)
+            this.checkList();
+        } else alert(a.message);
     },
     attachPhotoTmpl: function(a, b, c){
         this.req = (new Request.JSONP({
@@ -86,8 +85,9 @@ var FlickrClient = new Class({
                 d.stat == "ok" ? (new Element("a", {
                     href: d.sizes.size[d.sizes.size.length - 1].source,
                     target: "_blank",
-                    "class": "flickr"
-                })).adopt(b).inject(a) : alert(d.message)
+                    "class": "flickr",
+                    title: c.title
+                })).adopt(b).inject(a) : alert(d.message);
             }
         })).send();
     },
