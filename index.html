@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/mootools/1.4.1/mootools-yui-compressed.js"></script>
     <script src="javascript/mootools-more.js"></script>
     <script src="javascript/ScrollBar.js"></script>
-    <script src="javascript/ReMooz.js"></script>
+    <script src="javascript/milkbox.js"></script>
     <script src="javascript/FlickrClient.js"></script>
     <script src="javascript/GithubClient.js"></script>
     <script src="javascript/TwitterClient.js"></script>
@@ -18,7 +18,7 @@
 <body>
     <div id="header">
         <div id="imprint-container" class="box hidden">
-    		<h1>impressum</h1>
+        	<h1>impressum</h1>
     		<div id="imprint">
     			André Fiedler<br/>
     			Crimmitschauer Straße 66<br/>
@@ -34,62 +34,55 @@
     	<a href="#" id="imprint-opener">Impressum</a>
     </div>
     <br clss="clear"/>
-    <div class="col left">
-    	<div class="boxshadow">
-    		<div class="box" id="twitter-scrollbox">
-    			<div class="box-wrapper">
-    				<h1>persönliches</h1>
-    				<ul id="twitter">
-    				</ul>
-    				<br class="clear"/>
-    			</div>
-    		</div>
-    		<div class="more">
-    			<a href="http://twitter.com/sonnenkiste" target="_blank">Mehr Tweets &rarr;</a>
-    		</div>
-    		<div class="scrollbar" id="twitter-scrollbar">
-    			<div class="knob" id="twitter-knob">
-    			</div>
-    		</div>
-    	</div>
-    </div>
-    <div class="col center">
-    	<div class="boxshadow">
-    		<div class="box" id="flickr-scrollbox">
-    			<div class="box-wrapper">
-    				<h1>fotografisches</h1>
-    				<ul id="flickr">
-    				</ul>
-    				<br class="clear"/>
-    			</div>
-    		</div>
-    		<div class="more">
-    			<a href="http://flickr.com/photos/andre_fiedler/" target="_blank">Mehr Fotos &rarr;</a>
-    		</div>
-    		<div class="scrollbar" id="flickr-scrollbar">
-    			<div class="knob" id="flickr-knob">
-    			</div>
-    		</div>
-    	</div>
-    </div>
-    <div class="col right">
-    	<div class="boxshadow">
-    		<div class="box" id="github-scrollbox">
-    			<div class="box-wrapper">
-    				<h1>programmiertes</h1>
-    				<ul id="github">
-    				</ul>
-    				<br class="clear"/>
-    			</div>
-    		</div>
-    		<div class="more">
-    			<a href="http://github.com/SunboX" target="_blank">Mehr Projekte &rarr;</a>
-    		</div>
-    		<div class="scrollbar" id="github-scrollbar">
-    			<div class="knob" id="github-knob">
-    			</div>
-    		</div>
-    	</div>
+    <div class="cols">
+        <div class="col left">
+        	<div class="boxshadow">
+        		<div class="box" id="twitter-scrollbox">
+        			<div class="box-wrapper">
+        				<h1>persönliches</h1>
+        				<ul id="twitter">
+        				</ul>
+        				<br class="clear"/>
+        			</div>
+        		</div>
+        		<div class="more">
+        			<a href="http://twitter.com/sonnenkiste" target="_blank">Mehr Tweets &rarr;</a>
+        		</div>
+        		<div class="scrollbar" id="twitter-scrollbar"></div>
+        	</div>
+        </div>
+        <div class="col center">
+        	<div class="boxshadow">
+        		<div class="box" id="flickr-scrollbox">
+        			<div class="box-wrapper">
+        				<h1>fotografisches</h1>
+        				<ul id="flickr">
+        				</ul>
+        				<br class="clear"/>
+        			</div>
+        		</div>
+        		<div class="more">
+        			<a href="http://flickr.com/photos/andre_fiedler/" target="_blank">Mehr Fotos &rarr;</a>
+        		</div>
+        		<div class="scrollbar" id="flickr-scrollbar"></div>
+        	</div>
+        </div>
+        <div class="col right">
+        	<div class="boxshadow">
+        		<div class="box" id="github-scrollbox">
+        			<div class="box-wrapper">
+        				<h1>programmiertes</h1>
+        				<ul id="github">
+        				</ul>
+        				<br class="clear"/>
+        			</div>
+        		</div>
+        		<div class="more">
+        			<a href="http://github.com/SunboX" target="_blank">Mehr Projekte &rarr;</a>
+        		</div>
+        		<div class="scrollbar" id="github-scrollbar"></div>
+        	</div>
+        </div>
     </div>
     <script> 
             var pageTracker = _gat._getTracker('UA-426202-1');
